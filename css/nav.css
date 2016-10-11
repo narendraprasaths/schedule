@@ -134,7 +134,7 @@ body input ~ nav > ul {
 }
 
 body input ~ nav > ul > li {
-    background: #fff;
+    background: #000;
   opacity: 0;
   transition: .5s;
   transition-delay: 0s;
