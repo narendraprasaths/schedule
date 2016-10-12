@@ -13,7 +13,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Timetable</title>
+    <title>Projector Timetable</title>
       <link rel="stylesheet" href="css/table.css">
       <link rel="stylesheet" href="css/nav.css">  
       <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script> 
@@ -28,6 +28,7 @@
     <label for="burger"> <span></span> <span></span> <span></span> </label>
     <nav>
       <ul>
+        <li><a href="home.html">Home</a></li>
         <li><a href="#">Seminar Hall</a></li>
         <li><a href="#">Projector</a></li>
         <li><a href="logout.php">Logout</a></li>
