@@ -53,7 +53,7 @@
         </tr>
         <?php for ($i=0; $i <30; $i++) { 
 		      $dbdate =  date("Y-m-d",$timestamp);
-      		$select_sql = "SELECT * FROM booking WHERE bookdate = '$dbdate'";
+      		$select_sql = "SELECT * FROM projector WHERE bookdate = '$dbdate'";
           $select_result = mysqli_query($db,$select_sql);
           $query_result = mysqli_fetch_array($select_result);
         ?>

@@ -29,7 +29,7 @@ table {
 
 /* main */
 
-body { background: #34495e; }
+body { background: #000; }
 
 body h1 {
   position: fixed;
@@ -113,7 +113,7 @@ body input:checked + label span:last-child {
 }
 
 body input ~ nav {
-  background: #34495e;
+  background: #000;
   position: fixed;
   top: 0;
   left: 0;
@@ -134,7 +134,7 @@ body input ~ nav > ul {
 }
 
 body input ~ nav > ul > li {
-    background: #34495e;
+    background: #000;
   opacity: 0;
   transition: .5s;
   transition-delay: 0s;
