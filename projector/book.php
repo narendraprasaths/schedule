@@ -1,5 +1,5 @@
 <?php
-	include 'security/session.php';
+	include '../security/session.php';
 	
 	$username = $_SESSION['login_user'];
 	

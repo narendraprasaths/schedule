@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2016 at 08:17 AM
--- Server version: 10.1.8-MariaDB
--- PHP Version: 5.6.14
+-- Generation Time: Oct 12, 2016 at 05:54 PM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -25,10 +25,37 @@ USE `projector`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `booking`
+-- Table structure for table `projector`
 --
 
-CREATE TABLE `booking` (
+CREATE TABLE `projector` (
+  `bookid` int(11) NOT NULL,
+  `bookdate` date NOT NULL,
+  `bookday` varchar(10) NOT NULL,
+  `hour1` varchar(50) NOT NULL,
+  `hour2` varchar(50) NOT NULL,
+  `hour3` varchar(50) NOT NULL,
+  `hour4` varchar(50) NOT NULL,
+  `hour5` varchar(50) NOT NULL,
+  `hour6` varchar(50) NOT NULL,
+  `hour7` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `projector`
+--
+
+INSERT INTO `projector` (`bookid`, `bookdate`, `bookday`, `hour1`, `hour2`, `hour3`, `hour4`, `hour5`, `hour6`, `hour7`) VALUES
+(1, '2016-10-12', '', '', '', '', '', '', '', ''),
+(2, '2016-10-13', 'Thursday', '', '', '', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `seminarhall`
+--
+
+CREATE TABLE `seminarhall` (
   `bookid` int(11) NOT NULL,
   `bookdate` date NOT NULL,
   `bookday` varchar(10) NOT NULL,
@@ -68,9 +95,15 @@ INSERT INTO `users` (`uid`, `username`, `password`, `staffid`, `created`) VALUES
 --
 
 --
--- Indexes for table `booking`
+-- Indexes for table `projector`
 --
-ALTER TABLE `booking`
+ALTER TABLE `projector`
+  ADD PRIMARY KEY (`bookid`);
+
+--
+-- Indexes for table `seminarhall`
+--
+ALTER TABLE `seminarhall`
   ADD PRIMARY KEY (`bookid`);
 
 --
@@ -84,9 +117,14 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `booking`
+-- AUTO_INCREMENT for table `projector`
 --
-ALTER TABLE `booking`
+ALTER TABLE `projector`
+  MODIFY `bookid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `seminarhall`
+--
+ALTER TABLE `seminarhall`
   MODIFY `bookid` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `users`

@@ -11,7 +11,7 @@
 
 	if ($result) {
 		$_SESSION['login_user'] = $username;
-		header("location: ../home.html");
+		header("location: ../home.php");
 	}else{
 		echo '<script> alert("Invalid credentials");</script>';
 		header("location: ../index.php");
