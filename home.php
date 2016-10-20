@@ -19,7 +19,10 @@
     <meta charset="UTF-8">
     <title>Timetable</title>
       <link rel="stylesheet" href="css/table.css">
-      <link rel="stylesheet" href="css/nav.css">  
+      <link rel="stylesheet" href="css/nav.css"> 
+      <link rel="stylesheet" type="text/css" href="css/default.css" />
+      <link rel="stylesheet" type="text/css" href="css/component.css" />
+      <script src="js/modernizr.custom.js"></script> 
       <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script> 
       <script type="text/javascript" src="js/book.js"></script> 
   </head>
@@ -31,7 +34,43 @@
     <nav>
       <ul>
         <li><a href="home.php">Home</a></li>
-        <li><a href="sample.html">Change Password</a></li>
+
+        <!--popup-->
+      <div class="md-modal md-effect-18" id="modal-18">
+      <div class="md-content">
+      <h3>To change password</h3>
+      <div>
+        <form name="changepass" action="security/changepass.php" method="post">
+            Current Password :<input type="password" name="CurrentPassword"><br><br>
+            New Password : <input type="password" name="NewPassword"><br><br>
+            Re-type Password :<input type="password" name="ReNewPassword"><br><br>
+        <!--<input type="submit" value="change it"><br><br> -->
+        </form>
+        <button class="md-close" type="submit" value="change it" >Change it</button><br>
+        <button class="md-close">Close me!</button>
+        </div>
+        </div>
+        </div>
+
+
+
+
+
+
+        <div class="container" style="text-align: center;">
+        <!-- Top Navigation -->
+        <div class="column">
+        <!-- special modal that will add a perspective class to the html element -->
+        <button class="md-trigger md-setperspective" data-modal="modal-18" >Change Password
+        </button>
+        </div>
+        </div>
+        </div><!-- /container -->
+        <div class="md-overlay"></div>
+        <!--<li><a href="sample.html">Change Password</a></li>-->
+
+
+        <!--popup-->
         <li><a href="security/logout.php">Logout</a></li>
       </ul>
     </nav><br><br><br><br><br><br>
@@ -42,13 +81,13 @@
       <table border='0' cellpadding='0' cellspacing='0'>
         <tr class='days'>
           <th></th>
-          <th>Ist Hour</th>
-          <th>IInd Hour</th>
-          <th>IIIrd Hour</th>
-          <th>IVth Hour</th>
-          <th>Vth Hour</th>
-          <th>VIth Hour</th>
-          <th>VIIth Hour</th>
+          <th>1st Hour</th>
+          <th>2nd Hour</th>
+          <th>3rd Hour</th>
+          <th>4th Hour</th>
+          <th>5th Hour</th>
+          <th>6th Hour</th>
+          <th>7th Hour</th>
         </tr>
         <?php for ($i=0; $i <30; $i++) { 
 		      $dbdate =  date("Y-m-d",$timestamp);
@@ -142,5 +181,14 @@
       </table>
     </div>  
     <!-- / Booking Timetable -->
+    <script src="js/classie.js"></script>
+    <script src="js/modalEffects.js"></script>
+
+    <script>
+      // this is important for IEs
+      var polyfilter_scriptpath = '/js/';
+    </script>
+    <script src="js/cssParser.js"></script>
+    <script src="js/css-filters-polyfill.js"></script>
   </body>
 </html>
